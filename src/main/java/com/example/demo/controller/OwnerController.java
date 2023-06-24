@@ -24,7 +24,7 @@ public class OwnerController {
 	@Autowired // owner service
 	private OwnerService ownerService;
 
-	@PostMapping("owner")
+	@PostMapping("owner")// owner mapping
 	public ResponseEntity<OwnerResponse> callOwnerRegister(@RequestBody OwnerRequest ownerRequest) {
 		return ResponseEntity.ok(ownerService.OwnerRegister(ownerRequest));
 	}

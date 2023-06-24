@@ -14,7 +14,6 @@ import com.example.demo.request.OwnerRequest;
 import com.example.demo.request.UserRequest;
 import com.example.demo.response.OwnerResponse;
 import com.example.demo.response.OwnerResponseInfo;
-import com.example.demo.response.UserResponseInfo;
 import com.example.demo.service.OwnerService;
 import com.example.demo.util.OwnerConstants;
 
@@ -22,7 +21,7 @@ import com.example.demo.util.OwnerConstants;
 @RequestMapping(OwnerConstants.CONTROLLER_ROOT_PATH)
 public class OwnerController {
 
-	@Autowired
+	@Autowired // owner service
 	private OwnerService ownerService;
 
 	@PostMapping("owner")
@@ -35,7 +34,7 @@ public class OwnerController {
 			@PathVariable String secondName) {
 		return ResponseEntity.ok(ownerService.getOwnerByFirstName(firstName, secondName));
 	}
-	
+
 	@PutMapping("updateOwnerData/{firstName}/{secondName}")
 	public ResponseEntity<OwnerResponseInfo> updateOwnerData(@PathVariable String firstName,
 			@PathVariable String secondName, @RequestBody UserRequest userRequest) {

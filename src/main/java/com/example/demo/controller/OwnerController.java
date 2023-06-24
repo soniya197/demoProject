@@ -22,7 +22,7 @@ import com.example.demo.util.OwnerConstants;
 public class OwnerController {
 
 	@Autowired // owner service
-	private OwnerService ownerService;
+	private OwnerService ownerService;//hhgdjasgdajgjdas
 
 	@PostMapping("owner")// owner mapping
 	public ResponseEntity<OwnerResponse> callOwnerRegister(@RequestBody OwnerRequest ownerRequest) {

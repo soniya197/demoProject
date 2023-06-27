@@ -4,7 +4,7 @@ public class TestJava {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		useRecursion("abc", 1, 4);
 	}
 
 	public static int useRecursion(String someString, int i, int index) {
